@@ -1,0 +1,52 @@
+{
+  "name": "xfed-components",
+  "version": "1.0.0",
+  "description": "",
+  "main": "../dist/index.js",
+  "module": "../dist/index.es.js",
+  "scripts": {
+    "build": "rollup -c && npm run build-css && copyfiles package.json ../dist",
+    "build-css": "sass theme.scss theme.css && copyfiles *.css ../dist",
+    "watch": "npm-watch",
+    "test": "jest"
+  },
+  "author": "fayeah",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-react": "^7.14.5",
+    "@testing-library/react": "^12.0.0",
+    "@types/react": "^17.0.13",
+    "copyfiles": "^2.4.1",
+    "jest": "^27.0.6",
+    "npm-watch": "^0.10.0",
+    "rollup": "^2.52.6",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "sass": "^1.35.1",
+    "typescript": "^4.3.5"
+  },
+  "watch": {
+    "build-js": {
+      "patterns": [
+        "*.js"
+      ],
+      "extensions": ".js"
+    },
+    "build-css": {
+      "patterns": [
+        "*.scss"
+      ],
+      "extensions": ".scss"
+    }
+  },
+  "keywords": [
+    "react",
+    "javascript",
+    "typescript"
+  ]
+}
