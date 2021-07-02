@@ -1,8 +1,8 @@
 import React from 'react';
 
 interface ButtonProps {
-  type: 'submit' | 'reset' | 'button'
-  children: React.ReactElement
+  type?: 'submit' | 'reset' | 'button'
+  children?: React.ReactElement
 }
 
 const Button = (props: ButtonProps) => {

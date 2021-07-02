@@ -8,7 +8,7 @@
     "build": "rollup -c && npm run build-css && copyfiles package.json ../dist",
     "build-css": "sass theme.scss theme.css && copyfiles *.css ../dist",
     "watch": "npm-watch",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "author": "fayeah",
   "license": "ISC",
@@ -17,17 +17,23 @@
     "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.7",
     "@babel/preset-react": "^7.14.5",
+    "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
+    "@types/jest": "^26.0.23",
     "@types/react": "^17.0.13",
+    "@types/react-dom": "^17.0.8",
     "copyfiles": "^2.4.1",
     "jest": "^27.0.6",
     "npm-watch": "^0.10.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "rollup": "^2.52.6",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-typescript2": "^0.30.0",
     "sass": "^1.35.1",
+    "ts-jest": "^27.0.3",
     "typescript": "^4.3.5"
   },
   "watch": {
@@ -44,9 +50,21 @@
       "extensions": ".scss"
     }
   },
+  "jest":{
+    "preset": "ts-jest",
+    "testEnvironment": "jsdom",
+    "testPathIgnorePatterns": [
+      "dist/"
+    ]
+  },
   "keywords": [
     "react",
     "javascript",
     "typescript"
-  ]
+  ],
+  "standard": {
+    "ignore": [
+      "node_modules/"
+    ]
+  }
 }
