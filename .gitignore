@@ -1,3 +1,4 @@
 dist/
 src/node_modules/
 src/coverage/
+.DS_Store

@@ -10,7 +10,7 @@ const Button = (props: ButtonProps) => {
   return (
     <button
       type={type || "submit"}
-      className="acme-button">
+      className="f-button">
       {props.children}
     </button>
   )
