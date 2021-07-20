@@ -1,6 +1,6 @@
 import './App.css';
 import 'xfed-components/theme.css';
-import { Button } from 'xfed-components/index';
+import { Button, Carousel } from 'xfed-components/index';
 
 function App() {
   return (
@@ -12,6 +12,7 @@ import DatePicker from 'xfed-components/Button';
 
 `}
       <Button>Button component</Button>
+      <Carousel data={[0, 1]} type='number'></Carousel>
     </>
   );
 }

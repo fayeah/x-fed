@@ -39,9 +39,9 @@
   "watch": {
     "build": {
       "patterns": [
-        "*.js"
+        "*.js|*.ts|*.txs|*.jsx"
       ],
-      "extensions": ".js"
+      "extensions": [".js", ".ts", ".txs", ".jsx"]
     },
     "build-css": {
       "patterns": [
